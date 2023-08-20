@@ -8,11 +8,11 @@ import {
   StatsPercentage,
 } from './Statistics.styled';
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ stats, title }) => {
   return (
     <section>
       <StatsWrapper>
-        <StatsTitle> Upload stats </StatsTitle>
+        {title && <StatsTitle> {title}</StatsTitle>}
 
         <StatsList>
           {stats.map(item => {
